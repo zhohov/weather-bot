@@ -13,3 +13,4 @@ class TelegramUser(Entity):
 
     def add_log(self, log: WeatherLog) -> None:
         self.logs.add(log)
+
