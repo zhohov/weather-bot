@@ -4,7 +4,7 @@ import dataclasses
 
 @dataclasses.dataclass(frozen=True)
 class ValueObject():
-    @abc.abstractmethod
     @staticmethod
-    def create() -> 'ValueObject':
+    @abc.abstractmethod
+    def create(*args, **kwargs) -> 'ValueObject':
         raise NotImplementedError()
