@@ -8,3 +8,12 @@ class ValueObject():
     @abc.abstractmethod
     def create(*args, **kwargs) -> 'ValueObject':
         raise NotImplementedError()
+
+
+@dataclasses.dataclass(frozen=True)
+class TelegramUserID(ValueObject):
+    value: int
+
+    @staticmethod
+    def create(value: int) -> 'TelegramUserID':
+        return TelegramUserID(value=value)

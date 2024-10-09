@@ -1,7 +1,8 @@
 from datetime import datetime
 
-from src.core.logs.domain.value_objects import BotAnswer, TelegramUserID, UserCommand
-from src.core.shared.entity import Entity
+from src.core.shared.domain.entities import Entity
+from src.core.shared.domain.value_objects import TelegramUserID
+from src.core.logs.domain.value_objects import BotAnswer, UserCommand
 
 
 class WeatherLog(Entity):
