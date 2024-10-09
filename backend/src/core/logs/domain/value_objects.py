@@ -9,6 +9,8 @@ class UserCommand(ValueObject):
 
     @staticmethod
     def create(value: str) -> 'UserCommand':
+        if not value:
+            raise ValueError()
         return UserCommand(value=value) 
 
 
@@ -18,5 +20,7 @@ class BotAnswer(ValueObject):
 
     @staticmethod
     def create(value: str) -> 'BotAnswer':
+        if not value:
+            raise ValueError()
         return BotAnswer(value=value)
 

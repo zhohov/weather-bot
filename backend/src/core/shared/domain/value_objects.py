@@ -16,4 +16,6 @@ class TelegramUserID(ValueObject):
 
     @staticmethod
     def create(value: int) -> 'TelegramUserID':
+        if not value:
+            raise ValueError()
         return TelegramUserID(value=value)
